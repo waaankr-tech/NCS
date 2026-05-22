@@ -1079,7 +1079,218 @@ const slider=document.getElementById("softwareSlider");
 slider.scrollLeft += direction * 220;
 
 }
+<!-- ADS SECTION -->
+<section class="ads-section" id="ads">
 
+  <div class="ads-header">
+
+    <span>Advertising</span>
+
+    <h2>
+      خدمات الإعلانات الممولة
+    </h2>
+
+    <p>
+      إدارة الحملات الإعلانية على TikTok و Meta و Google
+      للوصول إلى أكبر عدد من العملاء وتحقيق نتائج احترافية.
+    </p>
+
+  </div>
+
+  <div class="ads-grid">
+
+    <!-- TikTok -->
+    <div class="ads-card">
+
+      <div class="ads-icon tiktok">
+        <i class="fa-brands fa-tiktok"></i>
+      </div>
+
+      <h3>TikTok Ads</h3>
+
+      <p>
+        إنشاء وإدارة حملات تيكتوك الإعلانية
+        وزيادة المشاهدات والمبيعات.
+      </p>
+
+      <a href="https://wa.me/9647734449499" target="_blank">
+        اطلب الخدمة
+      </a>
+
+    </div>
+
+    <!-- Meta -->
+    <div class="ads-card">
+
+      <div class="ads-icon facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </div>
+
+      <h3>Meta Ads</h3>
+
+      <p>
+        إعلانات فيسبوك وإنستغرام
+        بإعداد احترافي وتحسين النتائج.
+      </p>
+
+      <a href="https://wa.me/9647734449499" target="_blank">
+        اطلب الخدمة
+      </a>
+
+    </div>
+
+    <!-- Google -->
+    <div class="ads-card">
+
+      <div class="ads-icon google">
+        <i class="fa-brands fa-google"></i>
+      </div>
+
+      <h3>Google Ads</h3>
+
+      <p>
+        الظهور في نتائج البحث
+        وجلب عملاء مستهدفين لنشاطك.
+      </p>
+
+      <a href="https://wa.me/9647734449499" target="_blank">
+        اطلب الخدمة
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* القسم */
+.ads-section{
+  width:100%;
+  padding:70px 25px;
+  background:#ffffff;
+}
+
+/* العنوان */
+.ads-header{
+  margin-bottom:40px;
+}
+
+.ads-header span{
+  display:inline-block;
+  background:#eef4ff;
+  color:#2563eb;
+  padding:8px 18px;
+  border-radius:40px;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.ads-header h2{
+  font-size:42px;
+  color:#111827;
+  margin-bottom:15px;
+}
+
+.ads-header p{
+  color:#6b7280;
+  line-height:1.9;
+  max-width:650px;
+}
+
+/* الشبكة */
+.ads-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+/* الكرت */
+.ads-card{
+  background:#ffffff;
+  border-radius:30px;
+  padding:30px 25px;
+  border:1px solid #f3f4f6;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:.35s;
+}
+
+.ads-card:hover{
+  transform:translateY(-8px);
+}
+
+/* الأيقونة */
+.ads-icon{
+  width:72px;
+  height:72px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+  font-size:32px;
+}
+
+/* الألوان */
+.tiktok{
+  background:#f3f4f6;
+  color:#111111;
+}
+
+.facebook{
+  background:#eef4ff;
+  color:#1877f2;
+}
+
+.google{
+  background:#fff4e8;
+  color:#ea4335;
+}
+
+/* النص */
+.ads-card h3{
+  font-size:24px;
+  margin-bottom:12px;
+  color:#111827;
+}
+
+.ads-card p{
+  color:#6b7280;
+  line-height:1.8;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+/* الزر */
+.ads-card a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  background:#111827;
+  color:#ffffff;
+  padding:14px 22px;
+  border-radius:50px;
+  font-size:14px;
+  transition:.3s;
+}
+
+.ads-card a:hover{
+  transform:translateY(-3px);
+  background:#000000;
+}
+
+/* موبايل */
+@media(max-width:768px){
+
+.ads-header h2{
+  font-size:32px;
+}
+
+}
+
+</style>
 </script>
 
 </body>
