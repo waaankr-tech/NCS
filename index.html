@@ -708,6 +708,27 @@
     height: 38px;
     font-size: 16px;
   }
+}.mobile-nav-btn {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .mobile-nav-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: none !important;
+    border-radius: 14px;
+    margin-top: 10px;
+    padding: 13px 16px !important;
+    background: #111;
+    color: #fff !important;
+  }
+
+  .mobile-smart {
+    background: #eef4ff;
+    color: #2563eb !important;
+  }
 }
   </style>
   
@@ -719,14 +740,15 @@
     <div class="nav-container">
       <a href="#" class="logo">Nashwan CS</a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#">الرئيسية</a>
-        <a href="#services">الخدمات</a>
-        <a href="#programs">البرامج</a>
-        <a href="#support">الدعم عن بعد</a>
-        <a href="#contact">تواصل معنا</a>
-      </nav>
+<nav class="nav-links" id="navLinks">
+  <a href="#">الرئيسية</a>
+  <a href="#services">الخدمات</a>
+  <a href="#programs">البرامج</a>
+  <a href="#contact">تواصل معنا</a>
 
+  <a href="bio.html" class="mobile-nav-btn mobile-smart">رابطك الذكي</a>
+  <a href="#contact" class="mobile-nav-btn">احجز خدمة</a>
+</nav>
 <div class="nav-actions">
   <a href="bio.html" class="nav-action nav-smart">رابطك الذكي</a>
   <a href="#contact" class="nav-action">احجز خدمة</a>
