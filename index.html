@@ -844,6 +844,90 @@
     grid-template-columns: 1fr;
   }
 }
+    .site-footer {
+  background: #111827;
+  color: #fff;
+  padding: 46px 24px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.7fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.footer-info {
+  display: grid;
+  gap: 12px;
+  color: #e5e7eb;
+  font-size: 15px;
+}
+
+.footer-info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-info i {
+  color: #60a5fa;
+}
+
+.footer-payments {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.footer-payments span {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer-payments i {
+  font-size: 42px;
+  color: #f97316;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 28px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: #cbd5e1;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-info div {
+    justify-content: center;
+  }
+
+  .footer-payments {
+    justify-items: center;
+  }
+}
   </style>
   
 </head>
@@ -1082,7 +1166,41 @@
       
         </div>
 
-</div>
+
+     
+      </div>
+
+      <footer class="site-footer" id="contact">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>Nashwan CS</h3>
+      <p>خدمات تقنية، برمجيات، مواقع ومتاجر، دعم فني، وتفعيل برامج.</p>
+    </div>
+
+    <div class="footer-info">
+      <div>
+        <i class="fa-solid fa-location-dot"></i>
+        العراق - البصرة
+      </div>
+
+      <div>
+        <i class="fa-solid fa-credit-card"></i>
+        الدفع متاح عبر ماستر كارد
+      </div>
+    </div>
+
+    <div class="footer-payments">
+      <span>طرق الدفع</span>
+      <i class="fa-brands fa-cc-mastercard"></i>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    جميع الحقوق محفوظة © 2026 Nashwan CS
+  </div>
+</footer>
   <script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("active");
