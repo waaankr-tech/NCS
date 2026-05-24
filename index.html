@@ -601,7 +601,148 @@
     min-height: auto;
   }
 }
-  
+  .software-section {
+  padding: 90px 24px;
+  background: #fff;
+}
+
+.software-box {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e8edf5;
+  border-radius: 34px;
+  padding: 34px;
+  overflow: hidden;
+}
+
+.software-image {
+  position: relative;
+  min-height: 560px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.software-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.software-tag {
+  position: absolute;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  color: #111;
+  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tag-1 { top: 26px; right: 24px; }
+.tag-2 { top: 95px; left: 24px; }
+.tag-3 { bottom: 110px; right: 28px; }
+.tag-4 { bottom: 36px; left: 28px; }
+
+.software-content span {
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.software-content h2 {
+  margin: 10px 0 16px;
+  color: #111;
+  font-size: 44px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.software-content p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.software-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.software-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: #fff;
+  color: #111;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.software-btn i {
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  background: #eef4ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.software-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+@media (max-width: 900px) {
+  .software-box {
+    grid-template-columns: 1fr;
+  }
+
+  .software-content h2 {
+    font-size: 32px;
+  }
+
+  .software-image,
+  .software-image img {
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 560px) {
+  .software-section {
+    padding: 60px 18px;
+  }
+
+  .software-box {
+    padding: 18px;
+    border-radius: 26px;
+  }
+
+  .software-buttons {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
   
 </head>
@@ -783,7 +924,64 @@
       </div>
 
     </div>
+ 
   </div>
+
+    <section class="software-section" id="programs">
+  <div class="software-box">
+
+    <div class="software-image">
+      <img src="WhatsApp Image 2026-05-23 at 7.53.45 PM.jpeg" alt="خدمات البرامج والتفعيلات">
+
+      <div class="software-tag tag-1">Windows</div>
+      <div class="software-tag tag-2">Office</div>
+      <div class="software-tag tag-3">AutoCAD</div>
+      <div class="software-tag tag-4">Drivers</div>
+    </div>
+
+    <div class="software-content">
+      <span>البرامج والتفعيلات</span>
+      <h2>نجهز جهازك للعمل والدراسة بدون تعقيد</h2>
+
+      <p>
+        تنصيب وتفعيل البرامج الأساسية، تعريفات الويندوز، حلول Office، AutoCAD، وتجهيز الجهاز بشكل مرتب وسريع.
+      </p>
+
+      <div class="software-buttons">
+        <a href="#contact" class="software-btn">
+          <i class="fa-brands fa-windows"></i>
+          تفعيل Windows
+        </a>
+
+        <a href="#contact" class="software-btn">
+          <i class="fa-solid fa-file-word"></i>
+          تفعيل Microsoft Office
+        </a>
+
+        <a href="#contact" class="software-btn">
+          <i class="fa-solid fa-cube"></i>
+          تفعيل AutoCAD
+        </a>
+
+        <a href="#contact" class="software-btn">
+          <i class="fa-solid fa-microchip"></i>
+          تعاريف Windows
+        </a>
+
+        <a href="#contact" class="software-btn">
+          <i class="fa-solid fa-download"></i>
+          تنصيب البرامج الأساسية
+        </a>
+
+        <a href="#contact" class="software-btn">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          فورمات وتهيئة الجهاز
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
 </section>
   <script>
     function toggleMenu() {
