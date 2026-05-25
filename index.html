@@ -403,12 +403,33 @@
       line-height: 1.8;
     }
 
+    /* Developer note: هذا السطر يحول ملحقات الهاردوير/السوفتوير إلى سلايدر أفقي، بحيث يظهر خيار واحد بكل مرة. */
     .computer-card-grid {
-      display: grid;
-      gap: 10px;
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      touch-action: pan-x;
+      cursor: grab;
+      direction: ltr;
     }
 
+    .computer-card-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Developer note: عند سحب المستخدم للكروت يتغير المؤشر وتوقف الحركة الناعمة حتى يكون السحب مباشر. */
+    .computer-card-grid.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
+    }
+
+    /* Developer note: كل كارت هنا يمثل خيار خدمة واحد داخل الكارت الرئيسي مثل الفحص أو الترقية أو التنصيب. */
     .computer-card {
+      flex: 0 0 100%;
       min-height: 112px;
       padding: 15px;
       border-radius: 18px;
@@ -419,15 +440,10 @@
       grid-template-columns: auto 1fr auto;
       gap: 12px;
       align-items: center;
-      opacity: 0;
-      transform: translate3d(var(--card-x, 0), var(--card-y, 22px), 0);
-      transition: opacity 0.55s ease, transform 0.55s ease, background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-      transition-delay: var(--card-delay, 0s);
-    }
-
-    .computer-card.card-in-view {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
+      direction: rtl;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
     }
 
     .computer-card:hover {
@@ -449,21 +465,26 @@
     }
 
     .computer-card-grid .computer-card:nth-child(1) {
-      --card-x: 34px;
-      --card-y: 0;
-      --card-delay: 0.04s;
+      animation: cardSlideIn 0.5s ease both;
     }
 
     .computer-card-grid .computer-card:nth-child(2) {
-      --card-x: -34px;
-      --card-y: 0;
-      --card-delay: 0.12s;
+      animation: cardSlideIn 0.5s ease 0.08s both;
     }
 
     .computer-card-grid .computer-card:nth-child(3) {
-      --card-x: 0;
-      --card-y: 34px;
-      --card-delay: 0.2s;
+      animation: cardSlideIn 0.5s ease 0.16s both;
+    }
+
+    @keyframes cardSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .computer-group:nth-child(1) .computer-card:nth-child(1) i {
@@ -517,6 +538,57 @@
       align-items: center;
       gap: 7px;
       white-space: nowrap;
+    }
+
+    /* Developer note: أزرار الاتجاه والنقاط التي تظهر تحت السلايدر للتحكم بين الخيارات. */
+    .computer-slider-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 4px;
+      direction: ltr;
+    }
+
+    .computer-slider-btn {
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 13px;
+      color: #fff;
+      background: #2563eb;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .computer-slider-btn:hover {
+      transform: translateY(-2px);
+      background: #1d4ed8;
+    }
+
+    .computer-slider-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .computer-slider-dots button {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 999px;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .computer-slider-dots button.active {
+      width: 24px;
+      background: #2563eb;
     }
 
     .digital-grid {
@@ -1659,6 +1731,7 @@
           </div>
 
           <div class="computer-card-grid">
+            <!-- Developer note: خيار فحص أعطال الجهاز؛ يفتح صفحة تفاصيل التشخيص عند الضغط عليه. -->
             <a href="computer.html?service=diagnosis" class="computer-card">
               <i class="fa-solid fa-stethoscope"></i>
               <div>
@@ -1668,6 +1741,7 @@
               <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
             </a>
 
+            <!-- Developer note: خيار ترقية SSD/RAM؛ يشرح للمستخدم أن الخدمة تخص اختيار وتركيب قطع لتحسين السرعة. -->
             <a href="computer.html?service=upgrade" class="computer-card">
               <i class="fa-solid fa-memory"></i>
               <div>
@@ -1677,6 +1751,7 @@
               <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
             </a>
 
+            <!-- Developer note: خيار تنظيف وصيانة الحرارة؛ مخصص للغبار، المروحة، ومعجون التبريد. -->
             <a href="computer.html?service=cooling" class="computer-card">
               <i class="fa-solid fa-temperature-half"></i>
               <div>
@@ -1701,6 +1776,7 @@
           </div>
 
           <div class="computer-card-grid">
+            <!-- Developer note: خيار الفورمات وتنصيب Windows؛ ينقل المستخدم إلى تفاصيل خدمة التنصيب وتقسيم النظام. -->
             <a href="computer.html?service=format" class="computer-card">
               <i class="fa-brands fa-windows"></i>
               <div>
@@ -1710,6 +1786,7 @@
               <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
             </a>
 
+            <!-- Developer note: خيار التعاريف والبرامج؛ يخص تعريف قطع الجهاز وتنصيب البرامج الأساسية. -->
             <a href="computer.html?service=drivers" class="computer-card">
               <i class="fa-solid fa-microchip"></i>
               <div>
@@ -1719,6 +1796,7 @@
               <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
             </a>
 
+            <!-- Developer note: خيار تجهيز جهاز للعمل أو الدراسة؛ يجمع Windows وOffice والبرامج والحماية حسب احتياج المستخدم. -->
             <a href="computer.html?service=setup" class="computer-card">
               <i class="fa-solid fa-briefcase"></i>
               <div>
@@ -2095,22 +2173,98 @@
 
   <script>
     const whatsappNumber = "9647734449499";
-    const computerCards = document.querySelectorAll(".computer-card");
 
-    if ("IntersectionObserver" in window) {
-      const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("card-in-view");
-            cardObserver.unobserve(entry.target);
-          }
+    document.querySelectorAll(".computer-card-grid").forEach((grid) => {
+      // Developer note: هذا الكود يشتغل على كل مجموعة ملحقات ويحولها إلى سلايدر مستقل.
+      const cards = [...grid.querySelectorAll(".computer-card")];
+      let activeIndex = 0;
+      let startX = 0;
+      let startScroll = 0;
+      let moved = false;
+
+      // Developer note: إنشاء أزرار السابق/التالي والنقاط تلقائياً حتى لا نكررها داخل HTML.
+      const controls = document.createElement("div");
+      controls.className = "computer-slider-controls";
+      controls.innerHTML = `
+        <button class="computer-slider-btn" type="button" aria-label="الخيار السابق"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="computer-slider-dots"></div>
+        <button class="computer-slider-btn" type="button" aria-label="الخيار التالي"><i class="fa-solid fa-arrow-left"></i></button>
+      `;
+
+      const dotsWrap = controls.querySelector(".computer-slider-dots");
+      const [prevButton, nextButton] = controls.querySelectorAll(".computer-slider-btn");
+
+      // Developer note: كل نقطة تمثل خيار خدمة؛ عند الضغط عليها ينتقل السلايدر لذلك الخيار.
+      cards.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `عرض الخيار ${index + 1}`);
+        dot.addEventListener("click", () => goToCard(index));
+        dotsWrap.appendChild(dot);
+      });
+
+      grid.after(controls);
+
+      const updateActive = () => {
+        // Developer note: يحدد أي كارت ظاهر حالياً ويحدث النقطة النشطة أسفل السلايدر.
+        const gridBox = grid.getBoundingClientRect();
+        const gridCenter = gridBox.left + gridBox.width / 2;
+        activeIndex = cards.reduce((closestIndex, card, index) => {
+          const cardBox = card.getBoundingClientRect();
+          const cardCenter = cardBox.left + cardBox.width / 2;
+          const closestBox = cards[closestIndex].getBoundingClientRect();
+          const closestCenter = closestBox.left + closestBox.width / 2;
+          return Math.abs(cardCenter - gridCenter) < Math.abs(closestCenter - gridCenter) ? index : closestIndex;
+        }, 0);
+
+        [...dotsWrap.children].forEach((dot, index) => {
+          dot.classList.toggle("active", index === activeIndex);
         });
-      }, { threshold: 0.2, rootMargin: "0px 0px -40px 0px" });
+      };
 
-      computerCards.forEach((card) => cardObserver.observe(card));
-    } else {
-      computerCards.forEach((card) => card.classList.add("card-in-view"));
-    }
+      const goToCard = (index) => {
+        // Developer note: ينتقل إلى خيار محدد بدون الخروج من الكارت الرئيسي.
+        activeIndex = Math.max(0, Math.min(cards.length - 1, index));
+        cards[activeIndex].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+        window.setTimeout(updateActive, 280);
+      };
+
+      prevButton.addEventListener("click", () => goToCard(activeIndex - 1));
+      nextButton.addEventListener("click", () => goToCard(activeIndex + 1));
+      grid.addEventListener("scroll", () => window.requestAnimationFrame(updateActive), { passive: true });
+
+      // Developer note: دعم السحب بالماوس أو اللمس حتى يطلع الخيار الأول ثم الثاني ثم الثالث.
+      grid.addEventListener("pointerdown", (event) => {
+        startX = event.clientX;
+        startScroll = grid.scrollLeft;
+        moved = false;
+        grid.classList.add("dragging");
+        grid.setPointerCapture(event.pointerId);
+      });
+
+      grid.addEventListener("pointermove", (event) => {
+        if (!grid.classList.contains("dragging")) return;
+        const delta = event.clientX - startX;
+        if (Math.abs(delta) > 6) moved = true;
+        grid.scrollLeft = startScroll - delta;
+      });
+
+      const endDrag = () => {
+        grid.classList.remove("dragging");
+        window.setTimeout(updateActive, 120);
+      };
+
+      grid.addEventListener("pointerup", endDrag);
+      grid.addEventListener("pointercancel", endDrag);
+      grid.addEventListener("click", (event) => {
+        if (moved) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }, true);
+
+      updateActive();
+    });
 
     const serviceData = {
       website: {
