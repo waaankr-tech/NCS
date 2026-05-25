@@ -708,6 +708,209 @@
       box-shadow: 0 18px 35px rgba(15,23,42,0.08);
     }
 
+    .security-section {
+      padding: 96px 24px;
+      background: #f8fafc;
+    }
+
+    .security-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .security-head {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+
+    .security-head span {
+      color: #0f766e;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .security-head h2 {
+      margin-top: 8px;
+      color: #0f172a;
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .security-head p {
+      color: #475569;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .security-showcase {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .security-command {
+      position: relative;
+      min-height: 360px;
+      padding: 28px;
+      border-radius: 28px;
+      color: #fff;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(45,212,191,0.34), transparent 28%),
+        linear-gradient(135deg, #0f172a, #111827 58%, #042f2e);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .security-command::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.45;
+    }
+
+    .security-command > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .security-badge {
+      width: 74px;
+      height: 74px;
+      border-radius: 24px;
+      display: grid;
+      place-items: center;
+      background: rgba(45,212,191,0.16);
+      border: 1px solid rgba(153,246,228,0.24);
+      color: #5eead4;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .security-command h3 {
+      max-width: 440px;
+      font-size: 30px;
+      line-height: 1.35;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .security-command p {
+      max-width: 470px;
+      color: #cbd5e1;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .security-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .security-metrics div {
+      min-height: 78px;
+      border-radius: 18px;
+      padding: 13px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .security-metrics strong {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .security-metrics small {
+      color: #a7f3d0;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .security-card {
+      min-height: 170px;
+      padding: 22px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .security-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 46px rgba(15,23,42,0.09);
+      border-color: rgba(15,118,110,0.28);
+    }
+
+    .security-card i {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 21px;
+    }
+
+    .security-card h3 {
+      color: #0f172a;
+      font-size: 19px;
+      line-height: 1.45;
+      font-weight: 900;
+      margin-bottom: 7px;
+    }
+
+    .security-card p {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .security-card span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #0f766e;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .sec-teal { background: #0f766e; }
+    .sec-blue { background: #2563eb; }
+    .sec-dark { background: #111827; }
+    .sec-green { background: #16a34a; }
+    .sec-violet { background: #7c3aed; }
+    .sec-amber { background: #d97706; }
+    .sec-rose { background: #e11d48; }
+    .sec-cyan { background: #0891b2; }
+
     .site-footer {
       position: relative;
       margin-top: 46px;
@@ -905,7 +1108,9 @@
 
     @media (max-width: 950px) {
       .hero,
-      .software-box {
+      .software-box,
+      .security-showcase,
+      .security-head {
         grid-template-columns: 1fr;
         text-align: center;
       }
@@ -921,13 +1126,15 @@
       }
 
       .digital-grid,
-      .dev-grid {
+      .dev-grid,
+      .security-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .digital-head h2,
       .dev-head h2,
-      .software-content h2 {
+      .software-content h2,
+      .security-head h2 {
         font-size: 32px;
       }
     }
@@ -998,8 +1205,28 @@
 
       .digital-grid,
       .dev-grid,
-      .software-buttons {
+      .software-buttons,
+      .security-grid,
+      .security-metrics {
         grid-template-columns: 1fr;
+      }
+
+      .security-section {
+        padding: 64px 18px;
+      }
+
+      .security-command {
+        min-height: auto;
+        padding: 24px;
+      }
+
+      .security-command h3 {
+        font-size: 24px;
+      }
+
+      .security-card {
+        grid-template-columns: 1fr;
+        text-align: right;
       }
 
       .pc-visual-v2 {
@@ -1105,6 +1332,7 @@
         <a href="#top">الرئيسية</a>
         <a href="#services">الخدمات</a>
         <a href="#programs">البرامج</a>
+        <a href="#security">الأمان</a>
         <a href="#contact">تواصل معنا</a>
         <a href="https://t.me/Nashwan_kr" class="mobile-nav-btn mobile-smart" target="_blank">رابطك الذكي</a>
         <a href="https://wa.me/9647734449499?text=مرحبا%20اريد%20احجز%20خدمة" class="mobile-nav-btn" target="_blank">احجز خدمة</a>
@@ -1306,6 +1534,118 @@
           <a href="#" class="software-btn" data-service="office"><i class="fa-solid fa-file-word"></i> تفعيل Office</a>
           <a href="#" class="software-btn" data-service="autocad"><i class="fa-solid fa-cube"></i> تفعيل AutoCAD</a>
           <a href="#" class="software-btn" data-service="drivers"><i class="fa-solid fa-microchip"></i> تعاريف Windows</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="security-section" id="security">
+    <div class="security-container">
+      <div class="security-head">
+        <div>
+          <span>الحماية والأمان الرقمي</span>
+          <h2>طبقات حماية للأجهزة والحسابات والمواقع</h2>
+        </div>
+
+        <p>نجهز حماية عملية ومفهومة: فحص، تأمين، نسخ احتياطي، حماية حسابات، وتأمين مواقع ومتاجر من الأخطاء الشائعة والهجمات الآلية.</p>
+      </div>
+
+      <div class="security-showcase">
+        <div class="security-command">
+          <div>
+            <div class="security-badge"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>الأمان القوي ليس برنامج واحد، بل خطة كاملة</h3>
+            <p>نراجع الجهاز والحسابات والنسخ الاحتياطي والشبكة، ونرتب الحماية حسب احتياجك بدل الحلول العشوائية.</p>
+          </div>
+
+          <div class="security-metrics">
+            <div>
+              <strong>فحص</strong>
+              <small>كشف مشاكل الجهاز والحسابات</small>
+            </div>
+            <div>
+              <strong>تأمين</strong>
+              <small>إعدادات حماية مناسبة</small>
+            </div>
+            <div>
+              <strong>استرجاع</strong>
+              <small>خطة نسخ وعودة بعد المشكلة</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="security-grid">
+          <a href="security.html?service=device" class="security-card">
+            <i class="fa-solid fa-laptop-medical sec-teal"></i>
+            <div>
+              <h3>حماية الجهاز من الفايروسات</h3>
+              <p>فحص وتنظيف وتأمين Windows، ضبط Defender، تحديثات، وإزالة البرامج المشبوهة.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=accounts" class="security-card">
+            <i class="fa-solid fa-user-shield sec-blue"></i>
+            <div>
+              <h3>حماية الحسابات والسوشيال</h3>
+              <p>تفعيل MFA، تنظيم كلمات المرور، passkeys، وحماية Gmail وMeta وInstagram.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=whatsapp" class="security-card">
+            <i class="fa-brands fa-whatsapp sec-green"></i>
+            <div>
+              <h3>حماية واتساب وتيليگرام</h3>
+              <p>تحقق بخطوتين، مراجعة الأجهزة المرتبطة، الخصوصية، وتنبيه من طرق سرقة الحساب.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=website" class="security-card">
+            <i class="fa-solid fa-cloud-shield sec-dark"></i>
+            <div>
+              <h3>حماية المواقع والمتاجر</h3>
+              <p>SSL، Cloudflare، WAF، تقليل السبام والبوتات، وحماية صفحات الدخول.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=meta" class="security-card">
+            <i class="fa-brands fa-meta sec-violet"></i>
+            <div>
+              <h3>تأمين Meta Business</h3>
+              <p>مراجعة الصلاحيات، admins، الحسابات الإعلانية، وطبقات حماية حسابات الإعلانات.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=backup" class="security-card">
+            <i class="fa-solid fa-database sec-amber"></i>
+            <div>
+              <h3>النسخ الاحتياطي واسترجاع الملفات</h3>
+              <p>خطة Backup للملفات المهمة وتقليل خسارة البيانات بعد الفايروسات أو الفورمات.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=network" class="security-card">
+            <i class="fa-solid fa-wifi sec-cyan"></i>
+            <div>
+              <h3>حماية الراوتر والشبكة</h3>
+              <p>تأمين Wi-Fi، تغيير الإعدادات الضعيفة، شبكة ضيوف، ومراجعة الأجهزة المتصلة.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
+
+          <a href="security.html?service=recovery" class="security-card">
+            <i class="fa-solid fa-life-ring sec-rose"></i>
+            <div>
+              <h3>استرجاع بعد الاختراق</h3>
+              <p>خطوات احتواء المشكلة، استرجاع الحسابات الممكنة، وتحصينها حتى لا تتكرر.</p>
+              <span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
