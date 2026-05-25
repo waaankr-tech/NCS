@@ -334,61 +334,47 @@
 
     .computer-showcase {
       display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
-      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
       align-items: stretch;
-    }
-
-    .computer-feature {
-      min-height: 100%;
-      border-radius: 30px;
-      padding: 24px;
-      background: #f8fafc;
-      border: 1px solid #e8edf5;
-      display: grid;
-      gap: 18px;
-      align-content: space-between;
-    }
-
-    .computer-feature img {
-      width: 100%;
-      display: block;
-      border-radius: 24px;
-      background: #fff;
-      border: 1px solid #e2e8f0;
-    }
-
-    .computer-feature h3 {
-      color: #0f172a;
-      font-size: 28px;
-      line-height: 1.35;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .computer-feature p {
-      color: #475569;
-      font-size: 15px;
-      line-height: 1.9;
-    }
-
-    .computer-tabs {
-      display: grid;
-      gap: 18px;
     }
 
     .computer-group {
       background: #fff;
       border: 1px solid #e8edf5;
-      border-radius: 28px;
-      padding: 22px;
+      border-radius: 30px;
+      padding: 20px;
+      display: grid;
+      gap: 16px;
+      box-shadow: 0 18px 45px rgba(15,23,42,0.05);
+    }
+
+    .computer-group-media {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 14px;
+      border-radius: 24px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+
+    .computer-group-media img {
+      width: 100%;
+      display: block;
+      max-height: 190px;
+      object-fit: contain;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
     }
 
     .computer-group-title {
       display: flex;
       align-items: center;
       gap: 11px;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
 
     .computer-group-title i {
@@ -400,30 +386,38 @@
       place-items: center;
       background: #2563eb;
       font-size: 18px;
+      flex-shrink: 0;
     }
 
     .computer-group-title h3 {
       color: #0f172a;
-      font-size: 21px;
+      font-size: 25px;
+      line-height: 1.35;
       font-weight: 900;
+    }
+
+    .computer-group-media p {
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.8;
     }
 
     .computer-card-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 10px;
     }
 
     .computer-card {
-      min-height: 152px;
-      padding: 18px;
-      border-radius: 20px;
+      min-height: 112px;
+      padding: 15px;
+      border-radius: 18px;
       text-decoration: none;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
       transition: 0.25s ease;
     }
 
@@ -441,7 +435,6 @@
       place-items: center;
       color: #fff;
       background: #0f172a;
-      margin-bottom: 12px;
     }
 
     .computer-card h4 {
@@ -466,6 +459,7 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
+      white-space: nowrap;
     }
 
     .digital-grid {
@@ -1279,7 +1273,6 @@
 
       .digital-grid,
       .dev-grid,
-      .computer-card-grid,
       .security-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1359,7 +1352,6 @@
 
       .digital-grid,
       .dev-grid,
-      .computer-card-grid,
       .software-buttons,
       .security-grid,
       .security-metrics {
@@ -1368,6 +1360,15 @@
 
       .computer-section {
         padding: 64px 18px;
+      }
+
+      .computer-group-media,
+      .computer-card {
+        grid-template-columns: 1fr;
+      }
+
+      .computer-card span {
+        white-space: normal;
       }
 
       .security-section {
@@ -1565,85 +1566,87 @@
       </div>
 
       <div class="computer-showcase">
-        <div class="computer-feature">
-          <img src="computer-hardware.svg" alt="خدمات هاردوير الحاسوب">
-          <div>
-            <h3>نبدأ من المشكلة ونوصل للحل المناسب</h3>
-            <p>نوضح لك هل الخلل من النظام، التعاريف، الحرارة، الهارد، الرام، أو إعدادات الجهاز قبل أي خطوة.</p>
+        <div class="computer-group">
+          <div class="computer-group-media">
+            <img src="computer-hardware.svg" alt="خدمات هاردوير الحاسوب">
+            <div>
+              <div class="computer-group-title">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>الهاردوير</h3>
+              </div>
+              <p>فحص وترقية وصيانة القطع، مع توضيح سبب المشكلة قبل أي تبديل أو إصلاح.</p>
+            </div>
+          </div>
+
+          <div class="computer-card-grid">
+            <a href="computer.html?service=diagnosis" class="computer-card">
+              <i class="fa-solid fa-stethoscope"></i>
+              <div>
+                <h4>فحص أعطال الجهاز</h4>
+                <p>تشخيص البطء، الحرارة، الشاشة، البطارية، أو مشاكل التشغيل.</p>
+              </div>
+              <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
+            </a>
+
+            <a href="computer.html?service=upgrade" class="computer-card">
+              <i class="fa-solid fa-memory"></i>
+              <div>
+                <h4>ترقية SSD و RAM</h4>
+                <p>اختيار وتركيب ترقية مناسبة لتحسين سرعة الجهاز.</p>
+              </div>
+              <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
+            </a>
+
+            <a href="computer.html?service=cooling" class="computer-card">
+              <i class="fa-solid fa-temperature-half"></i>
+              <div>
+                <h4>تنظيف وصيانة حرارة</h4>
+                <p>تنظيف غبار، فحص مروحة، وتبديل معجون حسب الحاجة.</p>
+              </div>
+              <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
+            </a>
           </div>
         </div>
 
-        <div class="computer-tabs">
-          <div class="computer-group">
-            <div class="computer-group-title">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
-              <h3>الهاردوير</h3>
-            </div>
-
-            <div class="computer-card-grid">
-              <a href="computer.html?service=diagnosis" class="computer-card">
-                <div>
-                  <i class="fa-solid fa-stethoscope"></i>
-                  <h4>فحص أعطال الجهاز</h4>
-                  <p>تشخيص البطء، الحرارة، الشاشة، البطارية، أو مشاكل التشغيل.</p>
-                </div>
-                <span>عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
-              </a>
-
-              <a href="computer.html?service=upgrade" class="computer-card">
-                <div>
-                  <i class="fa-solid fa-memory"></i>
-                  <h4>ترقية SSD و RAM</h4>
-                  <p>اختيار وتركيب ترقية مناسبة لتحسين سرعة الجهاز.</p>
-                </div>
-                <span>عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
-              </a>
-
-              <a href="computer.html?service=cooling" class="computer-card">
-                <div>
-                  <i class="fa-solid fa-temperature-half"></i>
-                  <h4>تنظيف وصيانة حرارة</h4>
-                  <p>تنظيف غبار، فحص مروحة، وتبديل معجون حسب الحاجة.</p>
-                </div>
-                <span>عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
-              </a>
+        <div class="computer-group">
+          <div class="computer-group-media">
+            <img src="computer-software.svg" alt="خدمات سوفتوير الحاسوب">
+            <div>
+              <div class="computer-group-title">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>السوفتوير</h3>
+              </div>
+              <p>تنصيب Windows، التعاريف، البرامج، وتجهيز الجهاز للدراسة أو العمل بشكل مرتب.</p>
             </div>
           </div>
 
-          <div class="computer-group">
-            <div class="computer-group-title">
-              <i class="fa-solid fa-laptop-code"></i>
-              <h3>السوفتوير</h3>
-            </div>
+          <div class="computer-card-grid">
+            <a href="computer.html?service=format" class="computer-card">
+              <i class="fa-brands fa-windows"></i>
+              <div>
+                <h4>فورمات وتنصيب Windows</h4>
+                <p>تنصيب نظيف، تقسيم مناسب، وضبط أساسيات النظام.</p>
+              </div>
+              <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
+            </a>
 
-            <div class="computer-card-grid">
-              <a href="computer.html?service=format" class="computer-card">
-                <div>
-                  <i class="fa-brands fa-windows"></i>
-                  <h4>فورمات وتنصيب Windows</h4>
-                  <p>تنصيب نظيف، تقسيم مناسب، وضبط أساسيات النظام.</p>
-                </div>
-                <span>عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
-              </a>
+            <a href="computer.html?service=drivers" class="computer-card">
+              <i class="fa-solid fa-microchip"></i>
+              <div>
+                <h4>تعاريف وبرامج أساسية</h4>
+                <p>تعريف الصوت والشاشة والشبكة وتنصيب البرامج الضرورية.</p>
+              </div>
+              <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
+            </a>
 
-              <a href="computer.html?service=drivers" class="computer-card">
-                <div>
-                  <i class="fa-solid fa-microchip"></i>
-                  <h4>تعاريف وبرامج أساسية</h4>
-                  <p>تعريف الصوت والشاشة والشبكة وتنصيب البرامج الضرورية.</p>
-                </div>
-                <span>عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
-              </a>
-
-              <a href="computer.html?service=setup" class="computer-card">
-                <div>
-                  <i class="fa-solid fa-briefcase"></i>
-                  <h4>تجهيز جهاز للعمل أو الدراسة</h4>
-                  <p>Windows، Office، برامج، حماية، وترتيب كامل حسب استخدامك.</p>
-                </div>
-                <span>عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
-              </a>
-            </div>
+            <a href="computer.html?service=setup" class="computer-card">
+              <i class="fa-solid fa-briefcase"></i>
+              <div>
+                <h4>تجهيز جهاز للعمل أو الدراسة</h4>
+                <p>Windows، Office، برامج، حماية، وترتيب كامل حسب استخدامك.</p>
+              </div>
+              <span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span>
+            </a>
           </div>
         </div>
       </div>
