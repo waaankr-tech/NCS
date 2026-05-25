@@ -599,7 +599,7 @@
       grid-row: 1;
       background:
         radial-gradient(circle at 72% 30%, rgba(255,255,255,0.42), transparent 18%),
-        linear-gradient(135deg, #0f172a, #2563eb);
+        linear-gradient(135deg, var(--card-start, #0f172a), var(--card-end, #2563eb));
     }
 
     .computer-apple-card > i {
@@ -615,6 +615,52 @@
       border: 1px solid rgba(255,255,255,0.28);
       box-shadow: 0 18px 42px rgba(0,0,0,0.18);
       backdrop-filter: blur(10px);
+      color: #fff;
+      z-index: 2;
+    }
+
+    .computer-apple-card::after {
+      content: "";
+      grid-row: 1;
+      grid-column: 1;
+      align-self: end;
+      justify-self: start;
+      width: 128px;
+      height: 128px;
+      margin: 0 0 -28px -24px;
+      border-radius: 40px;
+      background: rgba(255,255,255,0.14);
+      transform: rotate(18deg);
+    }
+
+    .computer-apple-card:nth-child(1) {
+      --card-start: #0f172a;
+      --card-end: #2563eb;
+    }
+
+    .computer-apple-card:nth-child(2) {
+      --card-start: #312e81;
+      --card-end: #8b5cf6;
+    }
+
+    .computer-apple-card:nth-child(3) {
+      --card-start: #0f766e;
+      --card-end: #14b8a6;
+    }
+
+    .computer-apple-card:nth-child(4) {
+      --card-start: #1d4ed8;
+      --card-end: #38bdf8;
+    }
+
+    .computer-apple-card:nth-child(5) {
+      --card-start: #b45309;
+      --card-end: #f97316;
+    }
+
+    .computer-apple-card:nth-child(6) {
+      --card-start: #065f46;
+      --card-end: #22c55e;
     }
 
     .computer-apple-card > div {
@@ -665,6 +711,25 @@
       transform: translateY(-2px);
       color: #2563eb;
       border-color: #2563eb;
+    }
+
+    .computer-section-progress {
+      width: min(320px, 70vw);
+      height: 4px;
+      margin: 18px auto 0;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .computer-section-progress span {
+      display: block;
+      width: 16.666%;
+      height: 100%;
+      border-radius: inherit;
+      background: #2563eb;
+      transform: translateX(var(--progress-x, 0));
+      transition: transform 0.25s ease;
     }
 
     /* Developer note: أزرار الاتجاه والنقاط التي تظهر تحت السلايدر للتحكم بين الخيارات. */
@@ -2350,11 +2415,15 @@
         <button class="computer-section-btn" type="button" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
         <button class="computer-section-btn" type="button" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
       `;
+      const progress = document.createElement("div");
+      progress.className = "computer-section-progress";
+      progress.innerHTML = "<span></span>";
 
       computerShowcase.innerHTML = "";
-      computerShowcase.append(track, controls);
+      computerShowcase.append(track, controls, progress);
 
       const [prevSectionButton, nextSectionButton] = controls.querySelectorAll(".computer-section-btn");
+      const progressFill = progress.querySelector("span");
       let activeSectionIndex = 0;
       let sectionStartX = 0;
       let sectionStartScroll = 0;
@@ -2370,6 +2439,7 @@
           const closestCenter = closestBox.left + closestBox.width / 2;
           return Math.abs(cardCenter - trackCenter) < Math.abs(closestCenter - trackCenter) ? index : closestIndex;
         }, 0);
+        progressFill.style.setProperty("--progress-x", `${activeSectionIndex * 100}%`);
       };
 
       const goToSectionCard = (index) => {
