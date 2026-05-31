@@ -3629,7 +3629,357 @@
       }
     }
 
-  </style>
+  
+    /* Nashwan POS professional carousel section - light theme */
+    body {
+      background: #ffffff !important;
+      color: #222 !important;
+    }
+
+    .np-carousel-section {
+      padding: 92px 24px;
+      background:
+        radial-gradient(circle at 85% 0%, rgba(37, 99, 235, 0.09), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      color: #0f172a;
+      overflow: hidden;
+    }
+
+    .np-carousel-container {
+      max-width: 1240px;
+      margin: auto;
+    }
+
+    .np-carousel-head {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .np-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .np-carousel-head h2 {
+      color: #0f172a;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.25;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .np-carousel-head p {
+      color: #64748b;
+      font-size: 17px;
+      line-height: 1.9;
+      font-weight: 600;
+    }
+
+    .np-info-strip {
+      max-width: 680px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 0 auto 34px;
+    }
+
+    .np-info-strip span {
+      display: grid;
+      gap: 4px;
+      padding: 12px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+      text-align: center;
+    }
+
+    .np-info-strip small {
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .np-info-strip b {
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .np-slider-area {
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .np-cards-track {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 14px 8px 34px;
+      scrollbar-width: none;
+      direction: rtl;
+      cursor: grab;
+    }
+
+    .np-cards-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .np-cards-track.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
+    }
+
+    .np-screen-card {
+      flex: 0 0 min(372px, 86vw);
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 22px 58px rgba(15, 23, 42, 0.08);
+      scroll-snap-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .np-screen-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(37, 99, 235, 0.24);
+      box-shadow: 0 32px 76px rgba(15, 23, 42, 0.13);
+    }
+
+    .np-card-media {
+      padding: 16px;
+      background:
+        radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 40%),
+        #f8fafc;
+    }
+
+    .np-card-media img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, #eef4ff, #ecfdf5);
+      color: transparent;
+    }
+
+    .np-card-body {
+      padding: 22px 24px 24px;
+    }
+
+    .np-card-label {
+      display: inline-flex;
+      margin-bottom: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.10);
+      color: #059669;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .np-card-body h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+      font-size: 23px;
+      line-height: 1.4;
+      font-weight: 900;
+    }
+
+    .np-card-body p {
+      margin-bottom: 16px;
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 600;
+    }
+
+    .np-card-body ul {
+      display: grid;
+      gap: 9px;
+      list-style: none;
+    }
+
+    .np-card-body li {
+      position: relative;
+      padding-right: 23px;
+      color: #334155;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: 800;
+    }
+
+    .np-card-body li::before {
+      content: "✓";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #10b981;
+      font-weight: 900;
+    }
+
+    .np-slider-btn {
+      position: absolute;
+      top: 39%;
+      z-index: 5;
+      width: 48px;
+      height: 48px;
+      border: 1px solid #e5e7eb;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .np-slider-btn:hover {
+      transform: translateY(-2px);
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+
+    .np-prev {
+      right: -18px;
+    }
+
+    .np-next {
+      left: -18px;
+    }
+
+    .np-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: -2px 0 34px;
+    }
+
+    .np-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #cbd5e1;
+      transition: 0.25s ease;
+    }
+
+    .np-dots span.active {
+      width: 28px;
+      background: #2563eb;
+    }
+
+    .np-cta {
+      max-width: 780px;
+      margin: auto;
+      padding: 28px 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.82);
+      text-align: center;
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.06);
+    }
+
+    .np-cta h3 {
+      margin-bottom: 8px;
+      color: #0f172a;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 900;
+    }
+
+    .np-cta p {
+      max-width: 560px;
+      margin: 0 auto 18px;
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 600;
+    }
+
+    .np-cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .np-primary-btn,
+    .np-secondary-btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      padding: 13px 22px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+      transition: 0.25s ease;
+    }
+
+    .np-primary-btn {
+      background: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.22);
+    }
+
+    .np-secondary-btn {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #e5e7eb;
+    }
+
+    .np-primary-btn:hover,
+    .np-secondary-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 720px) {
+      .np-carousel-section {
+        padding: 64px 16px;
+      }
+
+      .np-info-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .np-screen-card {
+        flex-basis: 84vw;
+      }
+
+      .np-slider-btn {
+        display: none;
+      }
+
+      .np-card-body h3 {
+        font-size: 20px;
+      }
+
+      .np-cta-actions,
+      .np-primary-btn,
+      .np-secondary-btn {
+        width: 100%;
+      }
+    }
+
+</style>
 </head>
 
 <body id="top">
@@ -3677,79 +4027,140 @@
     </div>
   </section>
 
-  <section class="pos-product-section npos-product-showcase" id="nashwan-pos">
-    <div class="npos-wrap">
-      <div class="npos-head">
-        <span class="npos-eyebrow"><i class="fa-solid fa-cash-register"></i> منتجنا الحالي</span>
-        <h2>Nashwan POS</h2>
-        <p>برنامج كاشير ومبيعات حديث للأسواق والمحلات، يجمع البيع السريع، إدارة المنتجات، المخزون، الفواتير والتقارير في واجهة واحدة مرتبة.</p>
+    <!-- Nashwan POS Showcase - Professional Card Slider -->
+  <section class="np-carousel-section" id="nashwan-pos">
+    <div class="np-carousel-container">
+      <div class="np-carousel-head">
+        <span class="np-kicker"><i class="fa-solid fa-cash-register"></i> Nashwan POS</span>
+        <h2>شاهد النظام عن قرب</h2>
+        <p>استعرض أهم شاشات البرنامج بشكل كروت متحركة. ضع صور النظام الحقيقية داخل الكروت لعرضها للمستخدمين بطريقة مرتبة وواضحة.</p>
       </div>
 
-      <div class="npos-card-grid">
-        <article class="npos-card npos-card-featured">
-          <div class="npos-card-image npos-main-screen">
-            <div id="posHeroScreenshot"></div>
-          </div>
-          <div class="npos-card-content">
-            <div>
-              <span class="npos-chip">واجهة الكاشير</span>
-              <h3>بيع أسرع وتنظيم أوضح</h3>
-              <p>شاشة بيع عملية مع بحث، باركود، سلة واضحة، وإجمالي يظهر فوراً للكاشير.</p>
-            </div>
-            <div class="npos-actions">
-              <a id="posDownloadLink" href="#" class="npos-btn npos-btn-primary">تحميل النسخة التجريبية <i class="fa-solid fa-download"></i></a>
-              <a id="posWhatsapp" href="https://wa.me/9647734449499?text=مرحبا%20اريد%20تجربة%20Nashwan%20POS" class="npos-btn npos-btn-secondary" target="_blank">تواصل معنا <i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="npos-card">
-          <div class="npos-card-image npos-icon-shot">
-            <i class="fa-solid fa-boxes-stacked"></i>
-          </div>
-          <div class="npos-card-content">
-            <span class="npos-chip">المنتجات والمخزون</span>
-            <h3>إدارة المنتجات بسهولة</h3>
-            <p>أضف المنتجات، الأسعار، الباركود والكميات، مع متابعة المنتجات قليلة المخزون.</p>
-          </div>
-        </article>
-
-        <article class="npos-card">
-          <div class="npos-card-image npos-icon-shot">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
-          <div class="npos-card-content">
-            <span class="npos-chip">التقارير</span>
-            <h3>أرقام المبيعات بوضوح</h3>
-            <p>تابع المبيعات، الفواتير، الديون وأداء المحل من صفحة تقارير منظمة.</p>
-          </div>
-        </article>
-
-        <article class="npos-card npos-info-card">
-          <div class="npos-info-row">
-            <span>الإصدار</span>
-            <b id="posVersion">v1.0.0</b>
-          </div>
-          <div class="npos-info-row">
-            <span>حجم الملف</span>
-            <b id="posFileSize">قريباً</b>
-          </div>
-          <div class="npos-info-row">
-            <span>آخر تحديث</span>
-            <b id="posLastUpdated">2026-05-31</b>
-          </div>
-        </article>
+      <div class="np-info-strip" aria-label="معلومات البرنامج">
+        <span><small>الإصدار</small><b id="posVersion">v1.0.0</b></span>
+        <span><small>حجم الملف</small><b id="posFileSize">قريباً</b></span>
+        <span><small>آخر تحديث</small><b id="posLastUpdated">2026-05-31</b></span>
       </div>
 
-      <div class="npos-gallery-head">
-        <div>
-          <span>صور البرنامج</span>
-          <h3>لقطات من Nashwan POS</h3>
+      <div class="np-slider-area">
+        <button class="np-slider-btn np-prev" type="button" aria-label="السابق">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="np-cards-track" id="npCardsTrack">
+          <article class="np-screen-card">
+            <div class="np-card-media">
+              <!-- استبدل الرابط بصورة شاشة الكاشير -->
+              <img src="images/pos-cashier.png" alt="واجهة الكاشير في Nashwan POS">
+            </div>
+            <div class="np-card-body">
+              <span class="np-card-label">الكاشير</span>
+              <h3>واجهة بيع سريعة</h3>
+              <p>بيع مباشر، بحث بالاسم أو الباركود، اختيار طريقة الدفع وطباعة الفاتورة خلال ثواني.</p>
+              <ul>
+                <li>بحث وباركود</li>
+                <li>نقدي / دين / بطاقة</li>
+                <li>طباعة فاتورة</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="np-screen-card">
+            <div class="np-card-media">
+              <!-- استبدل الرابط بصورة شاشة المنتجات -->
+              <img src="images/pos-products.png" alt="إدارة المنتجات في Nashwan POS">
+            </div>
+            <div class="np-card-body">
+              <span class="np-card-label">المنتجات</span>
+              <h3>إدارة المنتجات والمخزون</h3>
+              <p>أضف المنتجات، الأسعار، الباركود، الكميات وصور المنتجات مع متابعة المخزون بسهولة.</p>
+              <ul>
+                <li>صور المنتجات</li>
+                <li>تصنيفات متعددة</li>
+                <li>تنبيهات المخزون</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="np-screen-card">
+            <div class="np-card-media">
+              <!-- استبدل الرابط بصورة شاشة التقارير -->
+              <img src="images/pos-reports.png" alt="تقارير Nashwan POS">
+            </div>
+            <div class="np-card-body">
+              <span class="np-card-label">التقارير</span>
+              <h3>تقارير واضحة ومفصلة</h3>
+              <p>تابع المبيعات، الأرباح، الديون، المنتجات الأكثر مبيعاً وحالة المخزون من مكان واحد.</p>
+              <ul>
+                <li>مبيعات يومية</li>
+                <li>رسوم بيانية</li>
+                <li>أفضل المنتجات</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="np-screen-card">
+            <div class="np-card-media">
+              <!-- استبدل الرابط بصورة شاشة الفواتير -->
+              <img src="images/pos-invoices.png" alt="الفواتير في Nashwan POS">
+            </div>
+            <div class="np-card-body">
+              <span class="np-card-label">الفواتير</span>
+              <h3>فواتير منظمة وقابلة للطباعة</h3>
+              <p>حفظ الفواتير، مراجعة تفاصيل كل عملية، وإعادة الطباعة عند الحاجة بسهولة.</p>
+              <ul>
+                <li>حفظ تلقائي</li>
+                <li>إعادة طباعة</li>
+                <li>تتبع العمليات</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="np-screen-card">
+            <div class="np-card-media">
+              <!-- استبدل الرابط بصورة شاشة العملاء أو الموردين -->
+              <img src="images/pos-customers.png" alt="إدارة العملاء والموردين في Nashwan POS">
+            </div>
+            <div class="np-card-body">
+              <span class="np-card-label">الإدارة</span>
+              <h3>عملاء وموردين وديون</h3>
+              <p>احتفظ ببيانات العملاء والموردين، تابع الديون والحسابات، ونظم معاملات المحل.</p>
+              <ul>
+                <li>سجل العملاء</li>
+                <li>حسابات الموردين</li>
+                <li>متابعة الديون</li>
+              </ul>
+            </div>
+          </article>
         </div>
-        <p>أضف روابط صور حقيقية للبرنامج، وستظهر هنا على شكل كروت مرتبة.</p>
+
+        <button class="np-slider-btn np-next" type="button" aria-label="التالي">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
       </div>
 
-      <div class="npos-gallery pos-gallery" id="posGallery"></div>
+      <div class="np-dots" aria-hidden="true">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="np-cta">
+        <h3>جاهز لتجربة Nashwan POS؟</h3>
+        <p>ابدأ بالنسخة التجريبية أو تواصل معنا لمعرفة تفاصيل البرنامج وطريقة التثبيت.</p>
+        <div class="np-cta-actions">
+          <a id="posDownloadLink" href="#" class="np-primary-btn">
+            <i class="fa-solid fa-download"></i>
+            تحميل النسخة التجريبية
+          </a>
+          <a id="posWhatsapp" href="https://wa.me/9647734449499?text=مرحبا%20اريد%20تجربة%20Nashwan%20POS" class="np-secondary-btn" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            تواصل معنا
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -4291,5 +4702,69 @@
       document.getElementById("navLinks").classList.toggle("active");
     }
   </script>
+
+  <script>
+    (function () {
+      const track = document.getElementById("npCardsTrack");
+      const prev = document.querySelector(".np-prev");
+      const next = document.querySelector(".np-next");
+      const dots = Array.from(document.querySelectorAll(".np-dots span"));
+
+      if (!track) return;
+
+      const getStep = () => {
+        const card = track.querySelector(".np-screen-card");
+        return card ? card.getBoundingClientRect().width + 22 : 390;
+      };
+
+      function updateDots() {
+        if (!dots.length) return;
+        const maxScroll = Math.max(1, track.scrollWidth - track.clientWidth);
+        const progress = Math.abs(track.scrollLeft) / maxScroll;
+        const index = Math.min(dots.length - 1, Math.round(progress * (dots.length - 1)));
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      }
+
+      prev?.addEventListener("click", () => {
+        track.scrollBy({ left: getStep(), behavior: "smooth" });
+      });
+
+      next?.addEventListener("click", () => {
+        track.scrollBy({ left: -getStep(), behavior: "smooth" });
+      });
+
+      track.addEventListener("scroll", updateDots, { passive: true });
+      updateDots();
+
+      let isDown = false;
+      let startX = 0;
+      let scrollStart = 0;
+
+      track.addEventListener("pointerdown", (event) => {
+        isDown = true;
+        startX = event.clientX;
+        scrollStart = track.scrollLeft;
+        track.classList.add("dragging");
+        track.setPointerCapture(event.pointerId);
+      });
+
+      track.addEventListener("pointermove", (event) => {
+        if (!isDown) return;
+        const walk = event.clientX - startX;
+        track.scrollLeft = scrollStart - walk;
+      });
+
+      track.addEventListener("pointerup", () => {
+        isDown = false;
+        track.classList.remove("dragging");
+      });
+
+      track.addEventListener("pointercancel", () => {
+        isDown = false;
+        track.classList.remove("dragging");
+      });
+    })();
+  </script>
+
 </body>
 </html>
