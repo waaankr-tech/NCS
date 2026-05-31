@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -2888,6 +2888,371 @@
         padding: 22px;
       }
     }
+  
+
+    /* Nashwan clean light fixes: remove dark theme and keep POS section light */
+    body {
+      background: #ffffff !important;
+      color: #222 !important;
+    }
+
+    .pos-product-section,
+    .pos-content-section {
+      background: #ffffff !important;
+      color: #111827 !important;
+    }
+
+    .pos-product-section {
+      padding: 72px 24px !important;
+    }
+
+    .pos-product-card {
+      border: 1px solid #e5e7eb !important;
+      background: #f8fafc !important;
+      box-shadow: 0 22px 54px rgba(15, 23, 42, 0.08) !important;
+    }
+
+    .pos-product-copy h2,
+    .pos-section-title h2,
+    .pos-download-panel h2 {
+      color: #0f172a !important;
+    }
+
+    .pos-product-copy p,
+    .pos-section-title p,
+    .pos-download-panel p {
+      color: #64748b !important;
+    }
+
+    .pos-info-strip span {
+      border: 1px solid #e5e7eb !important;
+      background: #ffffff !important;
+      color: #475569 !important;
+    }
+
+    .pos-info-strip b {
+      color: #111827 !important;
+    }
+
+    .pos-btn-primary {
+      background: #2563eb !important;
+      color: #ffffff !important;
+      box-shadow: 0 16px 34px rgba(37, 99, 235, 0.18) !important;
+    }
+
+    .pos-btn-secondary {
+      border: 1px solid #e5e7eb !important;
+      background: #ffffff !important;
+      color: #111827 !important;
+    }
+
+    .pos-browser-frame {
+      border: 1px solid #e5e7eb !important;
+      background: #ffffff !important;
+      box-shadow: 0 24px 62px rgba(15, 23, 42, 0.12) !important;
+    }
+
+    .pos-frame-bar {
+      border-bottom: 1px solid #e5e7eb !important;
+      background: #f8fafc !important;
+    }
+
+    .pos-frame-bar span {
+      background: #cbd5e1 !important;
+    }
+
+    .pos-frame-screen,
+    .pos-screenshot-placeholder {
+      background: #ffffff !important;
+      color: #64748b !important;
+    }
+
+    .pos-feature-grid article,
+    .pos-contact-card,
+    .pos-download-panel {
+      border: 1px solid #e5e7eb !important;
+      background: #ffffff !important;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07) !important;
+    }
+
+    .pos-feature-grid h3,
+    .pos-contact-card {
+      color: #111827 !important;
+    }
+
+    .pos-feature-grid p {
+      color: #64748b !important;
+    }
+
+    .pos-gallery button {
+      border: 1px solid #e5e7eb !important;
+      background: #ffffff !important;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07) !important;
+    }
+
+    .pos-gallery-empty {
+      border: 1px dashed #cbd5e1 !important;
+      background: #f8fafc !important;
+      color: #64748b !important;
+    }
+
+    @media (max-width: 720px) {
+      .pos-product-card {
+        grid-template-columns: 1fr !important;
+        padding: 20px !important;
+      }
+    }
+
+
+    /* Product card layout for Nashwan POS section */
+    .pos-product-section {
+      background: #f8fafc !important;
+      padding: 84px 24px !important;
+    }
+
+    .pos-products-wrap {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .pos-products-title {
+      max-width: 760px;
+      margin-bottom: 26px !important;
+    }
+
+    .pos-products-title span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #059669 !important;
+    }
+
+    .pos-product-cards {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .pos-product-main-card,
+    .pos-mini-card,
+    .pos-meta-card {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .pos-product-main-card {
+      overflow: hidden;
+      padding: 18px;
+    }
+
+    .pos-product-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .pos-product-badge,
+    .pos-product-status {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pos-product-badge {
+      background: rgba(16, 185, 129, 0.11);
+      color: #047857;
+    }
+
+    .pos-product-status {
+      background: #eef4ff;
+      color: #2563eb;
+    }
+
+    .pos-product-image-card {
+      padding: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #ffffff, #f1f5f9);
+    }
+
+    .pos-product-frame {
+      border-radius: 20px !important;
+      box-shadow: none !important;
+    }
+
+    .pos-product-frame .pos-frame-screen,
+    .pos-product-frame .pos-screenshot-placeholder,
+    .pos-product-frame .pos-frame-screen img {
+      min-height: 330px !important;
+    }
+
+    .pos-product-card-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 20px 4px 14px;
+    }
+
+    .pos-product-card-body h3 {
+      margin: 0 0 8px;
+      color: #0f172a;
+      font-size: clamp(25px, 3vw, 36px);
+      font-weight: 900;
+    }
+
+    .pos-product-card-body p {
+      max-width: 640px;
+      margin: 0;
+      color: #64748b;
+      line-height: 1.8;
+      font-weight: 700;
+    }
+
+    .pos-product-price-box {
+      min-width: 120px;
+      padding: 14px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      text-align: center;
+    }
+
+    .pos-product-price-box small,
+    .pos-meta-card span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .pos-product-price-box strong,
+    .pos-meta-card b {
+      display: block;
+      color: #0f172a;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .pos-product-card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .pos-product-side-cards {
+      display: grid;
+      gap: 14px;
+      align-content: stretch;
+    }
+
+    .pos-mini-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 13px;
+      align-items: start;
+      padding: 20px;
+    }
+
+    .pos-mini-card i {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      font-size: 18px;
+    }
+
+    .pos-mini-card h4 {
+      margin: 0 0 6px;
+      color: #0f172a;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .pos-mini-card p {
+      margin: 0;
+      color: #64748b;
+      line-height: 1.7;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .pos-meta-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .pos-meta-card div {
+      padding: 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      background: #f8fafc;
+    }
+
+    @media (max-width: 950px) {
+      .pos-product-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .pos-product-side-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pos-meta-card {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .pos-product-section {
+        padding: 58px 18px !important;
+      }
+
+      .pos-product-card-top,
+      .pos-product-card-body,
+      .pos-product-card-footer {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+      }
+
+      .pos-product-card-top,
+      .pos-product-card-footer {
+        flex-direction: column;
+      }
+
+      .pos-product-side-cards,
+      .pos-meta-card {
+        grid-template-columns: 1fr;
+      }
+
+      .pos-product-frame .pos-frame-screen,
+      .pos-product-frame .pos-screenshot-placeholder,
+      .pos-product-frame .pos-frame-screen img {
+        min-height: 230px !important;
+      }
+
+      .pos-btn {
+        width: 100%;
+      }
+    }
+
   </style>
 </head>
 
@@ -2898,9 +3263,7 @@
       <nav class="nav-links" id="navLinks">
         <a href="#top">الرئيسية</a>
         <a href="#nashwan-pos">Nashwan POS</a>
-        <a href="#computer">الحاسوب</a>
         <a href="#services">الخدمات</a>
-        <a href="#programs">البرامج</a>
         <a href="#security">الأمان</a>
         <a href="#contact">تواصل معنا</a>
         <a href="https://t.me/Nashwan_kr" class="mobile-nav-btn mobile-smart" target="_blank">رابطك الذكي</a>
@@ -2939,24 +3302,66 @@
   </section>
 
   <section class="pos-product-section" id="nashwan-pos">
-    <div class="pos-product-card">
-      <div class="pos-product-copy">
-        <span class="pos-hero-badge"><i class="fa-solid fa-cash-register"></i> برنامج كاشير للأسواق والمحلات</span>
+    <div class="pos-products-wrap">
+      <div class="pos-section-title pos-products-title">
+        <span><i class="fa-solid fa-cash-register"></i> منتجنا الحالي</span>
         <h2>Nashwan POS</h2>
-        <p>نظام كاشير ومبيعات لإدارة المنتجات، الفواتير، المخزون، العملاء والتقارير بواجهة حديثة وتجربة مجانية.</p>
-        <div class="pos-info-strip">
-          <span>الإصدار: <b id="posVersion">v1.0.0</b></span>
-          <span>حجم الملف: <b id="posFileSize">قريباً</b></span>
-          <span>آخر تحديث: <b id="posLastUpdated">2026-05-31</b></span>
-        </div>
-        <div class="pos-actions">
-          <a id="posDownloadLink" href="#" class="pos-btn pos-btn-primary">تحميل النسخة التجريبية <i class="fa-solid fa-download"></i></a>
-          <a id="posWhatsapp" href="https://wa.me/9647734449499?text=مرحبا%20اريد%20تجربة%20Nashwan%20POS" class="pos-btn pos-btn-secondary" target="_blank">تواصل معنا <i class="fa-brands fa-whatsapp"></i></a>
-        </div>
+        <p>قسم المنتج مرتب على شكل كروت: صورة البرنامج، معلوماته، التحميل، والتفاصيل المهمة بدون تحويل الموقع إلى ثيم أسود.</p>
       </div>
-      <div class="pos-browser-frame">
-        <div class="pos-frame-bar"><span></span><span></span><span></span></div>
-        <div class="pos-frame-screen" id="posHeroScreenshot"></div>
+
+      <div class="pos-product-cards">
+        <article class="pos-product-main-card">
+          <div class="pos-product-card-top">
+            <span class="pos-product-badge">برنامج كاشير للأسواق والمحلات</span>
+            <span class="pos-product-status">تجربة مجانية</span>
+          </div>
+
+          <div class="pos-product-image-card">
+            <div class="pos-browser-frame pos-product-frame">
+              <div class="pos-frame-bar"><span></span><span></span><span></span></div>
+              <div class="pos-frame-screen" id="posHeroScreenshot"></div>
+            </div>
+          </div>
+
+          <div class="pos-product-card-body">
+            <div>
+              <h3>Nashwan POS</h3>
+              <p>برنامج سطح مكتب لإدارة المبيعات، المنتجات، الفواتير، المخزون، العملاء والتقارير بواجهة عصرية.</p>
+            </div>
+            <div class="pos-product-price-box">
+              <small>النسخة</small>
+              <strong id="posVersion">v1.0.0</strong>
+            </div>
+          </div>
+
+          <div class="pos-product-card-footer">
+            <a id="posDownloadLink" href="#" class="pos-btn pos-btn-primary">تحميل النسخة التجريبية <i class="fa-solid fa-download"></i></a>
+            <a id="posWhatsapp" href="https://wa.me/9647734449499?text=مرحبا%20اريد%20تجربة%20Nashwan%20POS" class="pos-btn pos-btn-secondary" target="_blank">تواصل معنا <i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </article>
+
+        <aside class="pos-product-side-cards">
+          <article class="pos-mini-card">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <h4>كاشير سريع</h4>
+              <p>بيع، بحث، باركود، وسلة واضحة للعمليات اليومية.</p>
+            </div>
+          </article>
+
+          <article class="pos-mini-card">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <div>
+              <h4>مخزون وفواتير</h4>
+              <p>إدارة المنتجات، الكميات، الطباعة، وتتبع الفواتير.</p>
+            </div>
+          </article>
+
+          <article class="pos-meta-card">
+            <div><span>حجم الملف</span><b id="posFileSize">قريباً</b></div>
+            <div><span>آخر تحديث</span><b id="posLastUpdated">2026-05-31</b></div>
+          </article>
+        </aside>
       </div>
     </div>
   </section>
@@ -2975,21 +3380,9 @@
     <div class="pos-gallery" id="posGallery"></div>
   </section>
 
-  <section class="computer-section" id="computer">
-    <div class="computer-container">
-      <div class="computer-head"><div><span>خدمات الحاسوب</span><h2>هاردوير وسوفتوير لجهاز جاهز للعمل</h2></div><p>فحص وصيانة وترقية وتنصيب، من مشاكل القطع والحرارة إلى Windows والتعاريف والبرامج الأساسية.</p></div>
-      <div class="computer-showcase">
-        <div class="computer-group"><div class="computer-group-media"><img src="computer-hardware.svg" alt="خدمات هاردوير الحاسوب"><div><div class="computer-group-title"><i class="fa-solid fa-screwdriver-wrench"></i><h3>الهاردوير</h3></div><p>فحص وترقية وصيانة القطع.</p></div></div><div class="computer-card-grid"><a href="computer.html?service=diagnosis" class="computer-card"><i class="fa-solid fa-stethoscope"></i><div><h4>فحص أعطال الجهاز</h4><p>تشخيص البطء والحرارة ومشاكل التشغيل.</p></div><span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span></a><a href="computer.html?service=upgrade" class="computer-card"><i class="fa-solid fa-memory"></i><div><h4>ترقية SSD و RAM</h4><p>اختيار وتركيب ترقية مناسبة.</p></div><span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span></a><a href="computer.html?service=cooling" class="computer-card"><i class="fa-solid fa-temperature-half"></i><div><h4>تنظيف وصيانة حرارة</h4><p>تنظيف وفحص مروحة وتبديل معجون.</p></div><span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span></a></div></div>
-        <div class="computer-group"><div class="computer-group-media"><img src="computer-software.svg" alt="خدمات سوفتوير الحاسوب"><div><div class="computer-group-title"><i class="fa-solid fa-laptop-code"></i><h3>السوفتوير</h3></div><p>تنصيب Windows والتعاريف والبرامج.</p></div></div><div class="computer-card-grid"><a href="computer.html?service=format" class="computer-card"><i class="fa-brands fa-windows"></i><div><h4>فورمات وتنصيب Windows</h4><p>تنصيب نظيف وضبط أساسيات النظام.</p></div><span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span></a><a href="computer.html?service=drivers" class="computer-card"><i class="fa-solid fa-microchip"></i><div><h4>تعاريف وبرامج أساسية</h4><p>تعريف الصوت والشاشة والشبكة.</p></div><span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span></a><a href="computer.html?service=setup" class="computer-card"><i class="fa-solid fa-briefcase"></i><div><h4>تجهيز جهاز للعمل أو الدراسة</h4><p>Windows وOffice وبرامج وحماية.</p></div><span>التفاصيل <i class="fa-solid fa-arrow-left"></i></span></a></div></div>
-      </div>
-    </div>
-  </section>
-
   <section class="digital-services" id="services"><div class="digital-container"><div class="digital-head"><div><span>الخدمات الرقمية</span><h2>مواقع ومتاجر وحلول تسويق</h2></div><p>خدمات مرتبة تساعدك تظهر على الإنترنت وتدير طلباتك بشكل أوضح.</p></div><div class="digital-grid"><div class="digital-card"><div class="digital-icon icon-web"><i class="fa-solid fa-globe"></i></div><h3>موقع إلكتروني</h3><p>صفحة تعريفية أو موقع خدمات سريع ومتجاوب.</p><a href="#" data-service="website">عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></a></div><div class="digital-card"><div class="digital-icon icon-store"><i class="fa-solid fa-cart-shopping"></i></div><h3>متجر إلكتروني</h3><p>عرض منتجات وطلبات وتواصل.</p><a href="#" data-service="store">عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></a></div><div class="digital-card"><div class="digital-icon icon-meta"><i class="fa-brands fa-meta"></i></div><h3>Meta Pixel</h3><p>ربط وتتبع لتحسين الإعلانات.</p><a href="#" data-service="pixel">عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></a></div></div></div></section>
 
   <section class="dev-section" id="development"><div class="dev-container"><div class="dev-head"><div><span>التطوير</span><h2>برمجة مواقع ولوحات تحكم</h2></div><p>حلول مخصصة حسب طبيعة المشروع.</p></div><div class="dev-grid"><div class="dev-card"><div class="dev-icon dev-blue"><i class="fa-solid fa-code"></i></div><h3>برمجة مواقع</h3><p>موقع مخصص حسب احتياجك.</p><a href="#" data-service="customSite">عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></a></div><div class="dev-card"><div class="dev-icon dev-green"><i class="fa-solid fa-window-restore"></i></div><h3>لوحة تحكم</h3><p>إدارة محتوى أو طلبات أو عملاء.</p><a href="#" data-service="dashboard">عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></a></div><div class="dev-card"><div class="dev-icon dev-dark"><i class="fa-solid fa-database"></i></div><h3>قواعد بيانات</h3><p>تنظيم وربط البيانات.</p><a href="#" data-service="database">عرض التفاصيل <i class="fa-solid fa-arrow-left"></i></a></div></div></div></section>
-
-  <section class="software-section" id="programs"><div class="software-box"><div class="pc-visual-v2"><img src="computer-software.svg" alt="برامج الحاسوب"></div><div class="software-content"><span>البرامج</span><h2>تنصيب وتفعيل البرامج الأساسية</h2><p>Windows وOffice وتعريفات وبرامج العمل والدراسة.</p><div class="software-buttons"><a href="#" class="software-btn" data-service="windows"><i class="fa-brands fa-windows"></i> تفعيل Windows</a><a href="#" class="software-btn" data-service="office"><i class="fa-solid fa-file-word"></i> تفعيل Office</a><a href="#" class="software-btn" data-service="drivers"><i class="fa-solid fa-microchip"></i> تعاريف Windows</a></div></div></div></section>
 
   <section class="security-section" id="security"><div class="security-container"><div class="security-head"><div><span>الأمان</span><h2>حماية الأجهزة والحسابات</h2></div><p>فحص وحماية واسترجاع ومراجعة أمان للحسابات والمواقع.</p></div><div class="security-grid"><a href="security.html?service=device" class="security-card"><i class="fa-solid fa-laptop-medical sec-teal"></i><div><h3>حماية الجهاز</h3><p>فحص وحذف برامج ضارة.</p><span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span></div></a><a href="security.html?service=accounts" class="security-card"><i class="fa-solid fa-user-shield sec-blue"></i><div><h3>حماية الحسابات</h3><p>مراجعة كلمات المرور والصلاحيات.</p><span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span></div></a><a href="security.html?service=backup" class="security-card"><i class="fa-solid fa-database sec-amber"></i><div><h3>نسخ احتياطي</h3><p>ترتيب النسخ وحفظ الملفات المهمة.</p><span>تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i></span></div></a></div></div></section>
   <footer class="site-footer" id="contact">
